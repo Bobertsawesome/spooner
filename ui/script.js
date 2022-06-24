@@ -2566,7 +2566,7 @@ window.addEventListener('load', function() {
 		var x = document.getElementById('properties-x').value;
 		var y = document.getElementById('properties-y').value;
 		var z = document.getElementById('properties-z').value;
-
+		x = parseFloat(x).toFixed(4); y = parseFloat(y).toFixed(4); z = parseFloat(z).toFixed(4);
 		copyToClipboard(x + ', ' + y + ', ' + z)
 	});
 	
@@ -2585,7 +2585,7 @@ window.addEventListener('load', function() {
 		var p = document.getElementById('properties-pitch').value;
 		var r = document.getElementById('properties-roll').value;
 		var y = document.getElementById('properties-yaw').value;
-
+		p = parseFloat(p).toFixed(4); r = parseFloat(r).toFixed(4); y = parseFloat(y).toFixed(4);
 		copyToClipboard(p + ', ' + r + ', ' + y);
 	});
 
