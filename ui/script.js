@@ -1167,7 +1167,8 @@ function updatePropertiesMenu(data) {
 		entity.innerHTML = data.entity.toString();
 	}
 
-	document.querySelector('#properties-model').innerHTML = properties.name + " - " + properties.model;
+	/* document.querySelector('#properties-model').innerHTML = properties.name + " - " + properties.model; */
+	document.querySelector('#properties-model').innerHTML = properties.name;
 
 	setFieldIfInactive('properties-x', properties.x);
 	setFieldIfInactive('properties-y', properties.y);
