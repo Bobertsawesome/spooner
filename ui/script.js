@@ -1167,8 +1167,9 @@ function updatePropertiesMenu(data) {
 		entity.innerHTML = data.entity.toString();
 	}
 
-	/* document.querySelector('#properties-model').innerHTML = properties.name + " - " + properties.model; */
-	document.querySelector('#properties-model').innerHTML = properties.name;
+	document.querySelector('#properties-model').innerHTML = properties.model;
+	document.querySelector('#fillin').innerHTML = " - ";
+	document.querySelector('#properties-model2').innerHTML = properties.name;
 
 	setFieldIfInactive('properties-x', properties.x);
 	setFieldIfInactive('properties-y', properties.y);
@@ -2600,6 +2601,10 @@ window.addEventListener('load', function() {
 	document.getElementById('copy-model-name').addEventListener('click', function(event) {
 		var modelname = document.getElementById('properties-model').innerText;
 		copyToClipboard(modelname)
+	});
+	document.getElementById('copy-model-name2').addEventListener('click', function(event) {
+		var modelname2 = document.getElementById('properties-model2').innerText;
+		copyToClipboard(modelname2)
 	});
 
 	document.getElementById('copy-attachment-rotation').addEventListener('click', function(event) {
