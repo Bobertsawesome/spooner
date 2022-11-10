@@ -2030,6 +2030,32 @@ window.addEventListener('load', function() {
 		closeSpawnMenu();
 	});
 
+	document.addEventListener('keyup', (event) => {		// Bobert
+		if (event.key === "Escape" || event.key === "Delete") {
+			if (document.querySelector('#spawn-menu').style.display === 'flex') {
+				closeSpawnMenu();
+			} else {
+				switch (lastSpawnMenu) {
+					case 0:
+						closePedMenu();
+						break;
+					case 1:
+						closeVehicleMenu();
+						break;
+					case 2:
+						closeObjectMenu();
+						break;
+					case 3:
+						closePropsetMenu();
+						break;
+					case 4:
+						closePickupMenu();
+						break;
+				}
+			}
+		} 
+	});
+
 	document.querySelector('#properties-get-in').addEventListener('click', function(event) {
 		closePropertiesMenu(true);
 		getIntoVehicle(currentEntity())
