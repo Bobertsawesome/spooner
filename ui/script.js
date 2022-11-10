@@ -2036,24 +2036,12 @@ window.addEventListener('load', function() {
 				closeSpawnMenu();
 			} else {
 				switch (lastSpawnMenu) {
-					case 0:
-						closePedMenu();
-						break;
-					case 1:
-						closeVehicleMenu();
-						break;
-					case 2:
-						closeObjectMenu();
-						break;
-					case 3:
-						closePropsetMenu();
-						break;
-					case 4:
-						closePickupMenu();
-						break;
-				}
-			}
-		} 
+				  case 0: closePedMenu(); 		break;
+				  case 1: closeVehicleMenu(); 	break;
+				  case 2: closeObjectMenu(); 	break;
+				  case 3: closePropsetMenu(); 	break;
+				  case 4: closePickupMenu(); 	break;
+		}}}
 	});
 
 	document.querySelector('#properties-get-in').addEventListener('click', function(event) {
